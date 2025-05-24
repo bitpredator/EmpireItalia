@@ -1,5 +1,7 @@
 name: Lint
 on: [push, pull_request_target]
+permissions:
+  contents: read
 jobs:
   lint:
     name: Lint Resource
