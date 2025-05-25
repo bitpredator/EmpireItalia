@@ -22,7 +22,9 @@ const drawText = async (textData) => {
             break;
     }
 
-    text.innerHTML = textData.text;
+    // Protezione XSS
+    text.textContent = textData.text;
+
     document.getElementById("drawtext-container").style.display = "block";
     await sleep(100);
     addClass(text, "show");
@@ -62,7 +64,9 @@ const changeText = async (textData) => {
             direction = "left";
             break;
     }
-    text.innerHTML = textData.text;
+
+    // Protezione XSS
+    text.textContent = textData.text;
 
     await sleep(100);
     text.classList.add("show");
