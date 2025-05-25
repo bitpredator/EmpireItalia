@@ -1,2 +1,6 @@
 # FiveM Artifact
 artifact
+
+# Cache
+server-data/cache
+server-data/.replxx_history
